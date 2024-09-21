@@ -1,2 +1,2 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+//Phan mem diem danh tu dong su dung Raspberry Pi
+//Du an lam tren day
