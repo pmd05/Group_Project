@@ -1,13 +1,2 @@
 // Khách hàng: Phát triển giao diện và logic cho phép khách hàng duyệt dịch vụ, chọn stylist và đặt lịch hẹn.
 // Nhân viên salon: Xây dựng hệ thống quản lý và theo dõi yêu cầu lịch hẹn, bao gồm việc chấp nhận và từ chối các yêu cầu.
-
-// Tạo mô hình người dùng
-public class User
-{
-    public int Id { get; set; }
-    public string FullName { get; set; }
-    public string Email { get; set; }
-    public string PasswordHash { get; set; } // Hash mật khẩu
-    public string Role { get; set; } // Vai trò: Admin, Customer, Stylist, etc.
-}
-
