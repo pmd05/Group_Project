@@ -1,6 +1,5 @@
 // Xây dựng hệ thống đánh giá dịch vụ.
 // Thiết kế hệ thống tính điểm thưởng cho khách hàng dựa trên độ thường xuyên sử dụng dịch vụ và chất lượng phản hồi.
-
 // Tạo mô hình feedback and rewards
 public class Feedback
 {
