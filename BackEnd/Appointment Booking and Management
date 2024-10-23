@@ -125,47 +125,6 @@ public class Salon
     }
 }
 
-using System;
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        Salon salon = new Salon();
-
-        // Thêm dịch vụ
-        salon.AddService(new Service(1, "Cắt tóc", 150000));
-        salon.AddService(new Service(2, "Gội đầu", 50000));
-
-        // Thêm stylist
-        salon.AddStylist(new Stylist(1, "Nguyễn Văn A", "Cắt tóc"));
-        salon.AddStylist(new Stylist(2, "Trần Thị B", "Gội đầu"));
-
-        // Hiển thị dịch vụ
-        Console.WriteLine("Danh sách dịch vụ:");
-        foreach (var service in salon.GetServices())
-        {
-            Console.WriteLine($"{service.Id}. {service.Name} - Giá: {service.Price} VNĐ");
-        }
-
-        // Hiển thị stylist
-        Console.WriteLine("\nDanh sách stylist:");
-        foreach (var stylist in salon.GetStylists())
-        {
-            Console.WriteLine($"{stylist.Id}. {stylist.Name} - Chuyên môn: {stylist.Specialty}");
-        }
-
-        // Đặt lịch hẹn
-        Console.WriteLine("\nĐặt lịch hẹn:");
-        var selectedService = salon.GetServices()[0]; // Chọn dịch vụ đầu tiên
-        var selectedStylist = salon.GetStylists()[0]; // Chọn stylist đầu tiên
-        DateTime appointmentDate = DateTime.Now.AddDays(1); // Đặt lịch cho ngày mai
-
-        salon.CreateAppointment(selectedService, selectedStylist, appointmentDate);
-        Console.WriteLine("Lịch hẹn đã được tạo thành công.");
-    }
-}
-
 
 
 
