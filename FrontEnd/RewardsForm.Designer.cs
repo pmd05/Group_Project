@@ -52,7 +52,26 @@
             // 
             // btnSubmitFeedback
             // 
-            
+            this.btnSubmitFeedback.Location = new System.Drawing.Point(356, 312);
+            this.btnSubmitFeedback.Name = "btnSubmitFeedback";
+            this.btnSubmitFeedback.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmitFeedback.TabIndex = 2;
+            this.btnSubmitFeedback.Text = "Gửi phản hồi";
+            this.btnSubmitFeedback.UseVisualStyleBackColor = true;
+            this.btnSubmitFeedback.Click += new System.EventHandler(this.btnSubmitFeedback_Click);
+            // 
+            // RewardsForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSubmitFeedback);
+            this.Controls.Add(this.txtFeedback);
+            this.Controls.Add(this.lblPoints);
+            this.Name = "RewardsForm";
+            this.Text = "RewardsForm";
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
