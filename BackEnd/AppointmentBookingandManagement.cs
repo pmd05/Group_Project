@@ -84,9 +84,33 @@ public class Salon
 
     public bool CreateAppointment(Service service, Stylist stylist, DateTime date)
     {
-        var appointment = new Appointment(appointments.Count + 1, service, stylist, date);
-        appointments.Add(appointment);
-        return true; // Trả về true nếu đặt lịch thành công
+         // Xác thực nếu dịch vụ và thợ làm tóc tồn tại  
+    var service = services.FirstOrDefault(s => s.Id == serviceId);  
+    var stylist = stylists.FirstOrDefault(s => s.Id == stylistId);  
+
+    if (service == null || stylist == null)  
+    {  
+        Console.WriteLine("Dịch vụ hoặc thợ làm tóc không tồn tại.");  
+        return false;  
+    }  
+
+    // Kiểm tra để đảm bảo ngày hẹn là trong tương lai  
+    if (date <= DateTime.Now)  
+    {  
+        Console.WriteLine("Ngày hẹn phải là ngày trong tương lai.");  
+        return false;  
+    }  
+
+    // Kiểm tra các lịch hẹn đang xung đột  
+    if (appointments.Any(a => a.Stylist.Id == stylistId && a.Date == date))  
+    {  
+        Console.WriteLine("Thợ làm tóc đã có lịch hẹn vào thời gian này.");  
+        return false;  
+    }  
+
+    var appointment = new Appointment(appointments.Count + 1, service, stylist, date);  
+    appointments.Add(appointment);  
+    return true; // Trả về true nếu lịch hẹn được tạo thành công 
     }
 
     public List<Appointment> GetAppointments()
