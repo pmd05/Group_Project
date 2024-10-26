@@ -24,3 +24,12 @@ public decimal CalculateEarningsForStylist(int stylistId)
 
     return totalEarnings;  
 }
+
+public void PayStylistsForMonth()  
+{  
+    foreach (var stylist in stylists)  
+    {  
+        var earnings = CalculateEarningsForStylist(stylist.Id);  
+        Console.WriteLine($"Thợ làm tóc: {stylist.Name}, Lương tháng này: {earnings:C}");  
+    }  
+}
