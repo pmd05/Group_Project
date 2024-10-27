@@ -48,6 +48,78 @@ public class Appointment
     }
 }
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public class Salon
+{
+    private List<Service> services;
+    private List<Stylist> stylists;
+    private List<Appointment> appointments;
+
+    public Salon()
+    {
+        services = new List<Service>();
+        stylists = new List<Stylist>();
+        appointments = new List<Appointment>();
+    }
+
+    public void AddService(Service service)
+    {
+        services.Add(service);
+    }
+
+    public void AddStylist(Stylist stylist)
+    {
+        stylists.Add(stylist);
+    }
+
+    public List<Service> GetServices()
+    {
+        return services;
+    }
+
+    public List<Stylist> GetStylists()
+    {
+        return stylists;
+    }
+
+    public bool CreateAppointment(Service service, Stylist stylist, DateTime date)
+    {
+        var appointment = new Appointment(appointments.Count + 1, service, stylist, date);
+        appointments.Add(appointment);
+        return true; // Return true if appointment is successfully created
+    }
+
+    public List<Appointment> GetAppointments()
+    {
+        return appointments;
+    }
+
+    public bool ConfirmAppointment(int appointmentId)
+    {
+        var appointment = appointments.FirstOrDefault(a => a.Id == appointmentId);
+        if (appointment != null)
+        {
+            appointment.IsConfirmed = true;
+            return true; // Return true if appointment is successfully confirmed
+        }
+        return false; // Return false if appointment is not found
+    }
+
+    public bool RejectAppointment(int appointmentId)
+    {
+        var appointment = appointments.FirstOrDefault(a => a.Id == appointmentId);
+        if (appointment != null)
+        {
+            appointments.Remove(appointment);
+            return true; // Return true if appointment is successfully removed
+        }
+        return false; // Return false if appointment is not found
+    }
+}
+
 
 
 
