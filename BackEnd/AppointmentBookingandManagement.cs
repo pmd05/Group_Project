@@ -14,23 +14,7 @@ public class Service
     }
 }
 
-public class Stylist
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public string Specialty { get; set; }
-    public decimal BaseSalary { get; set; } // Lương cố định  
-    public decimal CommissionRate { get; set; } // Tỷ lệ hoa hồng
 
-    public Stylist(int id, string name, string specialty, decimal baseSalary, decimal commissionRate)
-    {
-        Id = id;
-        Name = name;
-        Specialty = specialty;
-        BaseSalary = baseSalary;  
-        CommissionRate = commissionRate;  
-    }
-}
 
 public class Appointment
 {
