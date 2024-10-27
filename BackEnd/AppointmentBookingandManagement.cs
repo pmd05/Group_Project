@@ -29,23 +29,7 @@ public class Service
 }
 
 
-public class Appointment
-{
-    public int Id { get; set; }
-    public Service Service { get; set; }
-    public Stylist Stylist { get; set; }
-    public DateTime Date { get; set; }
-    public bool IsConfirmed { get; set; }
 
-    public Appointment(int id, Service service, Stylist stylist, DateTime date)
-    {
-        Id = id;
-        Service = service;
-        Stylist = stylist;
-        Date = date;
-        IsConfirmed = false;
-    }
-}
 
 using System;
 using System.Collections.Generic;
