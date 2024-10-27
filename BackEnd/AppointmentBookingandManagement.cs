@@ -14,17 +14,17 @@ public class Service
     }
 }
 
-public class Service
+public class Stylist
 {
     public int Id { get; set; }
     public string Name { get; set; }
-    public decimal Price { get; set; }
-    
-    public Service(int id, string name, decimal price)
+    public string Specialty { get; set; }
+
+    public Stylist(int id, string name, string specialty)
     {
         Id = id;
         Name = name;
-        Price = price;
+        Specialty = specialty;
     }
 }
 
