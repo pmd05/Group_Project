@@ -18,6 +18,7 @@ namespace Chatgpt
         }
 private void btnLogin_Click(object sender, EventArgs e)
         {
+        
             // Lấy thông tin email và mật khẩu từ các TextBox
             string email = txtEmail.Text;
             string password = txtPassword.Text;
@@ -33,6 +34,7 @@ private void btnLogin_Click(object sender, EventArgs e)
                 mainForm.Show();
                 this.Hide(); // Ẩn form đăng nhập
             }
+            
             else
             {
                 // Thông báo nếu đăng nhập thất bại
