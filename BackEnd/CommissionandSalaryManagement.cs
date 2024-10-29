@@ -11,6 +11,7 @@ public decimal CalculateEarningsForStylist(int stylistId)
     // Tìm stylist theo ID  
     var stylist = stylists.FirstOrDefault(s => s.Id == stylistId);  
     if (stylist == null)  
+        
     {  
         Console.WriteLine("Thợ làm tóc không tồn tại.");  
         return 0;  
