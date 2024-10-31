@@ -22,6 +22,19 @@ namespace Chatgpt
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+               SqlConnection con = new SqlConnection("Data Source=PMD\\SQLEXPRESS;Initial Catalog=userRegister;Integrated Security=True");
+       SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[Register1]
+      ([fullname]
+      ,[email]
+      ,[password]
+      ,[username]
+      ,[phone]
+      ,[gender])
+VALUES
+      ('" + txtFullName.Text + "', '" + txtEmail.Text + "', '" + txtPassword + "', '" + txtUser.Text + "', '" + txtPhone.Text + "', '" + cmbGender.SelectedItem.ToString() + "')", con);
+      con.Open();
+       cmd.ExecuteNonQuery();
+       con.Close();
             // Lấy thông tin từ các textbox
             string fullName = txtFullName.Text;
             string email = txtEmail.Text;
