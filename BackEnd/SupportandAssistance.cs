@@ -1,3 +1,0 @@
-// Phát triển hệ thống hỗ trợ khách hàng, cho phép báo cáo vấn đề, yêu cầu hỗ trợ, và giải quyết các thắc mắc.
-// Tích hợp hệ thống xử lý sự cố kỹ thuật.
-//
